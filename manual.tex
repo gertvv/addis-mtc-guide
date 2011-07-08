@@ -1,14 +1,57 @@
 \documentclass[a4paper]{report}
 
+\usepackage{fancyhdr}
+\usepackage{hyperref}
+\usepackage{graphicx}
+\graphicspath{{graphics/}}
+\usepackage{wrapfig}
+
+\usepackage[utf8]{inputenc}
+\usepackage[english]{babel}
+\usepackage{datetime}
+
+% Define Page style for all chapters
+\pagestyle{fancy}
+\fancyhf{}
+\lhead[]{\thepage}
+\rhead[\thepage]{}
+
+% Define license terms
+\usepackage{xmpincl}
+\includexmp{CC_Attribution-ShareAlike_3.0_Unported}
+
 \title{Network meta-analysis using ADDIS 1.6}
 \author{Gert van Valkenhoef}
+\date{Draft, \today}
 
 \begin{document}
 
+% Title page
 \maketitle
 
+% Copyright page
+\newpage
+~\vfill
+\thispagestyle{empty}
+\setlength{\parindent}{0pt}
+\setlength{\parskip}{\baselineskip}
+Copyright \copyright\ 2011\ Gert van Valkenhoef
+%\par\smallcaps{Published by \thanklesspublisher}
+
+\par \url{http://drugis.org}
+
+\begin{wrapfigure}{r}{0.18\textwidth}
+\includegraphics[width=0.18\textwidth]{by-sa}
+\end{wrapfigure}
+\par This work is licensed under a Creative Commons Attribution-ShareAlike 3.0 Unported License. \\
+\url{http://creativecommons.org/licenses/by-sa/3.0/}
+
+\par\textit{Draft, \today}
+
+% Table of contents
 \tableofcontents
 
+% Content
 \chapter{Introduction}
 
 \chapter{Bayesian hierarchical models and Markov chain Monte Carlo}
